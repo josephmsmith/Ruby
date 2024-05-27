@@ -11,7 +11,7 @@ The repository is organized into the following directories:
 
 ## Goals
 
-The primary goal of this repository is to provide a structured way to practice and improve your algorithm-solving skills using Ruby. Whether you're preparing for coding interviews, enhancing your problem-solving abilities, or simply enjoying the challenge, this repo is here to help.
+The primary goal of this repo is to provide a structured way to practice and improve your algorithm-solving skills using Ruby. Whether you're preparing for coding interviews, enhancing your problem-solving abilities, or simply enjoying the challenge, this repo is here to help.
 
 ## How to Use
 
@@ -44,4 +44,5 @@ Create a new Pull Request.
 
 
 License
-This repository is licensed under the MIT License. See the LICENSE file for more information.
+This repository is licensed under the MIT License. 
+See the LICENSE file for more information.
