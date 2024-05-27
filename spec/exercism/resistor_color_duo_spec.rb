@@ -30,5 +30,9 @@ RSpec.describe ResistorColorDuo do
     it 'returns 1 for black and brown' do
       expect(ResistorColorDuo.value(%w[black brown])).to eq(1)
     end
+
+    it 'returns invalid color' do
+      expect(ResistorColorDuo.value(%w[pink brown])).to eq(1)
+    end
   end
 end

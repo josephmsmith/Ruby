@@ -18,6 +18,10 @@ class ResistorColorDuo
       first_two_colors = colors[0..1] # gives our keys
       first_color_value = COLOR_VALUES[first_two_colors[0]]
       second_color_value = COLOR_VALUES[first_two_colors[1]]
+      if first_color_value.nil? || second_color_value.nil?
+        raise ArgumentError, "Need a real color, not #{colors.inspect}"
+      end
+
       (first_color_value*10) + second_color_value
     end
   end
