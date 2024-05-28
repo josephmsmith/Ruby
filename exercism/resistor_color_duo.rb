@@ -1,16 +1,16 @@
 class ResistorColorDuo
-    COLOR_VALUES = {
-      'black' => 0,
-      'brown' => 1,
-      'red' => 2,
-      'orange' => 3,
-      'yellow' => 4,
-      'green' => 5,
-      'blue' => 6,
-      'violet' => 7,
-      'grey' => 8,
-      'white' => 9
-    }
+  COLOR_VALUES = {
+    'black' => 0,
+    'brown' => 1,
+    'red' => 2,
+    'orange' => 3,
+    'yellow' => 4,
+    'green' => 5,
+    'blue' => 6,
+    'violet' => 7,
+    'grey' => 8,
+    'white' => 9
+  }
   
     def self.value(colors)
       # return the numbers associated with colors array and only include first 2 numbers as two digit
@@ -24,5 +24,5 @@ class ResistorColorDuo
 
       (first_color_value*10) + second_color_value
     end
-  end
+end
   
