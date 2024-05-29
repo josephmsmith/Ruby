@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'set'
+# require 'set'
 
 # CharsFinder is a utility class to check if an array of characters
 # contains all the characters necessary to form a given string.
