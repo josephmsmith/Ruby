@@ -1,12 +1,14 @@
 # frozen_string_literal: true
+require_relative '../helpers/helper'
 
 def foo_bar(n)
-  # TODO: validation check
-  if n.is_a?(Integer) && n > 0
-    # TODO: print 1-n
+  # Validation check
+  if Helper.positive_integer?(n)
+    # Print 1 to n
     (1..n).each { |char| print "#{char}," }
     puts
-    # TODO: print foo/bar statement
+
+    # Print Foo/Bar statement
     if n % 3 == 0 && n % 5 == 0
       puts "FooBar"
     elsif n % 3 == 0
@@ -17,10 +19,9 @@ def foo_bar(n)
       puts n
     end
   else
-    "Invalid input. Input a positive integer please."
+    puts "Invalid input. Input a positive integer please."
   end
 end
-
 
 ## OPTIMAL SOLUTION ##
 # def foo_bar(n)

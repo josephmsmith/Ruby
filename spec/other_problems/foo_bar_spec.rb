@@ -1,6 +1,7 @@
 # foo_bar_spec.rb
-
+# frozen_string_literal: true
 require_relative '../../other_problems/foo_bar'
+require_relative '../../helpers/helper'
 
 RSpec.describe '#foo_bar' do
   it 'prints numbers from 1 to n followed by FooBar for multiples of 3 and 5' do
@@ -20,8 +21,27 @@ RSpec.describe '#foo_bar' do
   end
 
   it 'returns an error message for invalid input' do
-    expect(foo_bar(-1)).to eq("Invalid input. Input a positive integer please.")
-    expect(foo_bar(0)).to eq("Invalid input. Input a positive integer please.")
-    expect(foo_bar('a')).to eq("Invalid input. Input a positive integer please.")
+    expect { foo_bar(-1) }.to output("Invalid input. Input a positive integer please.\n").to_stdout
+    expect { foo_bar(0) }.to output("Invalid input. Input a positive integer please.\n").to_stdout
+    expect { foo_bar('a') }.to output("Invalid input. Input a positive integer please.\n").to_stdout
+  end
+end
+
+RSpec.describe Helper do
+  describe '.positive_integer?' do
+    it 'returns true for positive integers' do
+      expect(Helper.positive_integer?(1)).to be true
+      expect(Helper.positive_integer?(10)).to be true
+    end
+
+    it 'returns false for non-positive integers' do
+      expect(Helper.positive_integer?(-1)).to be false
+      expect(Helper.positive_integer?(0)).to be false
+    end
+
+    it 'returns false for non-integer values' do
+      expect(Helper.positive_integer?('a')).to be false
+      expect(Helper.positive_integer?(3.14)).to be false
+    end
   end
 end
