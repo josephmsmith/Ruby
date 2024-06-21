@@ -2,6 +2,8 @@
 
 class Braces
   def self.valid_order(string)
+    return false unless string.is_a?(String) && !string.empty? && string.match?(/\A[(){}\[\]]*\z/)
+
     # init an empty stack and matching brace hash
     stack = []
     matching_brace = { ')' => '(', ']' => '[', '}' => '{' }
