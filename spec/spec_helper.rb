@@ -1,4 +1,11 @@
 # spec/spec_helper.rb
+require 'rspec'
+
+# Add multiple directories to the load path
+directories = ['excercism', 'leetcode', 'other_problems']
+directories.each do |directory|
+  $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', directory))
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|

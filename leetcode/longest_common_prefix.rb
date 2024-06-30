@@ -10,7 +10,7 @@ def longest_common_prefix(strs)
   # Iterate through each string in the array
   strs.each do |str|
     # While the current string doesn't start with the prefix
-    until str.start_with?(prefix)
+    until str.downcase.start_with?(prefix.downcase)
       # Remove the last character from the prefix
       prefix = prefix[0...-1]
       # Return an empty string if there's no common prefix
@@ -21,8 +21,3 @@ def longest_common_prefix(strs)
   # Return the prefix after all adjustments
   prefix
 end
-
-# Test cases to check the function
-puts longest_common_prefix(%w[flower flow flight]) # Output: "fl"
-puts longest_common_prefix(%w[dog racecar car])    # Output: ""
-puts longest_common_prefix(%w[racerdog racecar raceman])    # Output: "Race"
